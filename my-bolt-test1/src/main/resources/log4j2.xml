@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="org.hibernate.SQL" level="info">
+    	<AppenderRef ref="Console"/>
+    </Logger>   
+    <Logger name="org.hibernate.type" level="info">
+    	<AppenderRef ref="Console"/>
+    </Logger>      
+    <Logger name="org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl" level="INFO">
+    	<AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework.orm.jpa.JpaTransactionManager" level="INFO">
+    	<AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework.orm.jpa.EntityManagerFactoryUtils" level="INFO">
+    	<AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="INFO">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
